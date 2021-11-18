@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"todo_app/app/models"
@@ -25,5 +26,39 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		}
 		http.Redirect(w, r, "/", 302)
 	}
+}
 
+func login(w http.ResponseWriter, r *http.Request) {
+	generateHTML(w, nil, "layout", "public_navbar", "login")
+}
+
+func authenticate(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseForm()
+	user, err := models.GetUserByEmail(r.PostFormValue("email"))
+	fmt.Println("------------------user取得----------------------")
+	fmt.Println(user)
+	fmt.Println("----------------------------------------")
+	if err != nil {
+		log.Println(err)
+		http.Redirect(w, r, "/login", 302)
+	}
+	if user.PassWord == models.Encrypt(r.PostFormValue("password")) {
+		session, err := user.CreateSession()
+		fmt.Println("------------------session取得----------------------")
+		fmt.Println(session)
+		fmt.Println("----------------------------------------")
+		if err != nil {
+			log.Println(err)
+		}
+
+		cookie := http.Cookie{
+			Name:     "_cookie",
+			Value:    session.UUID,
+			HttpOnly: true,
+		}
+		http.SetCookie(w, &cookie)
+		http.Redirect(w, r, "/", 302)
+	} else {
+		http.Redirect(w, r, "/login", 302)
+	}
 }
