@@ -3412,3 +3412,267 @@ net/http.(*conn).serve(0xc0001a8000, {0x4545240, 0xc00009d560})
 	/usr/local/go/src/net/http/server.go:1929 +0xb08
 created by net/http.(*Server).Serve
 	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:11 server.go:3159: http: panic serving [::1]:50800: template: index.html:7: function "Content" not defined
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b6330})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0000ba000}, {0x44ab200, 0xc0000c4200}, {0xc000139888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0000ba000}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0000ba000}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0000ba000}, 0xc000182200)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011b770}, {0x4544d18, 0xc0000ba000}, 0xc000182200)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc000137360, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:11 server.go:3159: http: panic serving [::1]:50801: template: index.html:7: function "Content" not defined
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc00021c330})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc000220000}, {0x44ab200, 0xc00022c200}, {0xc00013f888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc000220000}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc000220000}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc000220000}, 0xc000182100)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011b6b0}, {0x4544d18, 0xc000220000}, 0xc000182100)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc000137400, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:11 server.go:3159: http: panic serving [::1]:50802: template: index.html:7: function "Content" not defined
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc000119390})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0001900e0}, {0x44ab200, 0xc000192480}, {0xc0001a9888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0001900e0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0001900e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0001900e0}, 0xc000182300)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011b860}, {0x4544d18, 0xc0001900e0}, 0xc000182300)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc0001374a0, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:41 server.go:3159: http: panic serving [::1]:50925: template: index.html:7: function "Content" not defined
+goroutine 38 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b6690})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0000ba0e0}, {0x44ab200, 0xc0000c4780}, {0xc000139888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0000ba0e0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0000ba0e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0000ba0e0}, 0xc000280000)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000a2b70}, {0x4544d18, 0xc0000ba0e0}, 0xc000280000)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc0000fe000, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:41 server.go:3159: http: panic serving [::1]:50926: template: index.html:7: function "Content" not defined
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc00021c680})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0002200e0}, {0x44ab200, 0xc00022c700}, {0xc00013f888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0002200e0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0002200e0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0002200e0}, 0xc000182500)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001be450}, {0x4544d18, 0xc0002200e0}, 0xc000182500)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc000137540, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:41 server.go:3159: http: panic serving [::1]:50927: template: index.html:7: function "Content" not defined
+goroutine 43 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b69f0})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0000ba1c0}, {0x44ab200, 0xc0000c4c80}, {0xc000139888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0000ba1c0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0000ba1c0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0000ba1c0}, 0xc000280100)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000a3710}, {0x4544d18, 0xc0000ba1c0}, 0xc000280100)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc0000fe0a0, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50966: template: index.html:7: function "Content" not defined
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc00021c9d0})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0002201c0}, {0x44ab200, 0xc00022cc80}, {0xc00013f888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0002201c0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0002201c0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0002201c0}, 0xc000280200)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc000296270}, {0x4544d18, 0xc0002201c0}, 0xc000280200)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc0001375e0, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50967: template: index.html:7: function "Content" not defined
+goroutine 29 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc000119700})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0001901c0}, {0x44ab200, 0xc000192a80}, {0xc0001a9888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0001901c0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0001901c0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0001901c0}, 0xc000182600)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001be570}, {0x4544d18, 0xc0001901c0}, 0xc000182600)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc000137680, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50968: template: index.html:7: function "Content" not defined
+goroutine 48 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b6d60})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0000ba2a0}, {0x44ab200, 0xc0000c5180}, {0xc000139888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0000ba2a0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0000ba2a0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0000ba2a0}, 0xc000280300)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc000296330}, {0x4544d18, 0xc0000ba2a0}, 0xc000280300)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc0000fe140, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50973: template: index.html:7: function "Content" not defined
+goroutine 62 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b70b0})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0000ba380}, {0x44ab200, 0xc0000c5680}, {0xc000139888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0000ba380}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0000ba380}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0000ba380}, 0xc00027e100)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00026a2a0}, {0x4544d18, 0xc0000ba380}, 0xc00027e100)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc00027c000, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50974: template: index.html:7: function "Content" not defined
+goroutine 63 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc000119a50})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc0001902a0}, {0x44ab200, 0xc000192f80}, {0xc0001a9888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc0001902a0}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc0001902a0}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc0001902a0}, 0xc00027e000)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00026a240}, {0x4544d18, 0xc0001902a0}, 0xc00027e000)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc00027c0a0, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
+2021/11/18 12:11:51 server.go:3159: http: panic serving [::1]:50975: template: index.html:7: function "Content" not defined
+goroutine 64 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1801 +0xb9
+panic({0x446ba00, 0xc0000b7230})
+	/usr/local/go/src/runtime/panic.go:1047 +0x266
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+todo_app/app/controllers.generateHTML({0x4544d18, 0xc000190380}, {0x44ab200, 0xc000193500}, {0xc0001a9888, 0x3, 0x24})
+	/Users/suguru/projects/go/todo_app/app/controllers/server.go:17 +0xf9
+todo_app/app/controllers.index({0x4544d18, 0xc000190380}, 0x0)
+	/Users/suguru/projects/go/todo_app/app/controllers/route_main.go:28 +0x328
+net/http.HandlerFunc.ServeHTTP(0x0, {0x4544d18, 0xc000190380}, 0x0)
+	/usr/local/go/src/net/http/server.go:2046 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0, {0x4544d18, 0xc000190380}, 0xc00027e200)
+	/usr/local/go/src/net/http/server.go:2424 +0x149
+net/http.serverHandler.ServeHTTP({0xc00026a390}, {0x4544d18, 0xc000190380}, 0xc00027e200)
+	/usr/local/go/src/net/http/server.go:2878 +0x43b
+net/http.(*conn).serve(0xc00027c140, {0x45465e0, 0xc00011b560})
+	/usr/local/go/src/net/http/server.go:1929 +0xb08
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3033 +0x4e8
